@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CenPoint Web Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <div v-for="oToDo in aToDo">
+        {{ oToDo.text }}
+      </div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Welcome to your to do list. Please do it!',
+          aToDo: [],
+          aCats: [
+            { catid: 1, name: 'High Priority'},
+            { catid: 2, name: "Can't Forget"},
+            { catid: 3, name: 'If I Have Time'},
+          ],
+        },
+
+        created(){
+            this.aToDo = localStorage.getItem('toDo');
+            if (!this.aToDo){
+                this.aToDo = [
+                    {id: 1, text: 'Learn JavaScript', done: false, cat: 1 },
+                    {id: 2, text: 'Learn CSS', done: false, cat: 2 },
+                    {id: 3, text: 'Build something awesome', done: true, cat: 2 }
+                ];
+                localStorage.setItem('toDo', JSON.stringify(this.aToDo));
+            } else {
+                this.aToDo = JSON.parse(this.aToDo);
+            }
+        }, // created
+
+
+
+      });
+
+
+      
+      
+
+      
+
+        
+
+    </script>
+  </body>
+</html>

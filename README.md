@@ -2,6 +2,9 @@
 ## Requirements:
 * Format to match screenshot
     * Raw CSS Only. No Frameworks
+      <br/>
+      
+    * <img src="https://github.com/srrbach/WebTest/blob/main/Screenshot%202023-11-16%20133018.png?raw=true" height="500rem" />
 
 * Code a way to add a to do list item and format (match rest of page theme)
 

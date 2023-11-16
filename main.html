@@ -6,9 +6,25 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ message }}</h1>
-      <div v-for="oToDo in aToDo">
-        {{ oToDo.text }}
+      <img src="CPcircle.png" alt="CenPoint Logo">
+      <div>{{ message }}</div>
+
+      <div>Sort By Done</div>
+      <select @change="sortToDo" v-model="doneSortDir">
+        <option value="ASC">Not Done</option>
+        <option value="DESC">Done</option>
+      </select>
+
+      <br><br>
+
+
+      <div v-for="oCat in aCats">
+        {{ oCat.name }}
+
+        <div v-for="oToDo in aToDo.filter(x => x.cat == oCat.catid)">
+          <input type="checkbox" v-model="oToDo.done">
+          {{ oToDo.text }}
+        </div>
       </div>
     </div>
 
@@ -23,6 +39,7 @@
             { catid: 2, name: "Can't Forget"},
             { catid: 3, name: 'If I Have Time'},
           ],
+          doneSortDir: 'ASC',
         },
 
         created(){
@@ -37,19 +54,25 @@
             } else {
                 this.aToDo = JSON.parse(this.aToDo);
             }
+
+            this.sortToDo();
         }, // created
 
 
+        methods: {
+          sortToDo() {
+            if (this.doneSortDir == 'ASC'){
+              this.aToDo = this.aToDo.sort((obj1, obj2) => { return (obj1.done > obj2.done ? 1 : obj1.done < obj2.done ? -1 : 0) });
+            } else {
+              this.aToDo = this.aToDo.sort((obj1, obj2) => { return (obj1.done < obj2.done ? 1 : obj1.done > obj2.done ? -1 : 0) });
+            }
+          },
 
+          otherCoolMethod() {
+            console.log('I am a cool method');
+          },
+        }, // methods
       });
-
-
-      
-      
-
-      
-
-        
 
     </script>
   </body>

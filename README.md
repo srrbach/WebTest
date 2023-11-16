@@ -9,7 +9,11 @@
 
 <br/>
 <br/>
+Clone the repository and create a new branch. Create a Pull Request for your branch when you are done.
+
 No ChatGPT, Github Copilot, etc.
+
+
 
 <br/>
 <br/>

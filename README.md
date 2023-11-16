@@ -4,7 +4,7 @@
     * Raw CSS Only. No Frameworks
       <br/>
       
-    * <img src="https://github.com/srrbach/WebTest/blob/main/Screenshot%202023-11-16%20133018.png?raw=true" height="500px" />
+    * <img src="https://github.com/srrbach/WebTest/blob/main/Screenshot%202023-11-16%20133018.png?raw=true" height="300px" />
 
 * Code a way to add a to do list item and format (match rest of page theme)
 

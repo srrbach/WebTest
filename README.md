@@ -12,7 +12,7 @@
 
 <br/>
 <br/>
-Clone the repository and create a new branch. Create a Pull Request for your branch when you are done.
+Clone the repository or download the files to start. Email back the completed main.html and any needed supporting files.
 
 No ChatGPT, Github Copilot, etc.
 
